@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <h1>AJOin Hello World</h1>
-      <p>It is a PWA TWA React Application.</p>
+      <p>It is test a PWA TWA React Application.</p>
     </div>
   );
 }
