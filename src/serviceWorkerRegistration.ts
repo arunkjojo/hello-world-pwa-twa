@@ -80,6 +80,7 @@ function registerValidSW(swUrl: string, config?: Config) {
               // Execute callback
               if (config && config.onUpdate) {
                 config.onUpdate(registration);
+                window.location.reload();
               }
             } else {
               // At this point, everything has been precached.
@@ -125,7 +126,7 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
       }
     })
     .catch(() => {
-      console.log('No internet connection found. App is running in offline mode.');
+      alert("No internet connection found. App is running in offline mode. Please Turn ON Internet");
     });
 }
 
