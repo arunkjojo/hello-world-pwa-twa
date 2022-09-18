@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-// custom components and styles
-import './UI.css';
+
 import Greeting from './components/Greeting';
 import ResultApp from './components/ResultApp';
 
