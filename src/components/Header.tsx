@@ -25,7 +25,7 @@ const Header = () => {
             </div>
             <div className="navbar navbar-lighjt bg-light shadow-sm">
                 <div className="container">
-                    <a rel="noreferrer" href="#" className="navbar-brand d-flex align-items-center">
+                    <a rel="noreferrer" href="/" className="navbar-brand d-flex align-items-center">
                         <img src={icon} />
                         <strong>KERALA LOTTERY RESULT</strong>
                     </a>

@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="text-muted py-5">
         <div className="container">
             <p className="float-end mb-1">
-            <a rel="noreferrer" href="#">Back to top</a>
+              <a rel="noreferrer" href="/">Back to top</a>
             </p>
-            <p className="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p className="mb-0">New to Bootstrap? <a rel="noreferrer" href="/">Visit the homepage</a> or read our <a rel="noreferrer" href="../getting-started/introduction/">getting started guide</a>.</p>
+            <p className="mb-1">KeralaLotteryResult is &copy; keralalotteryonline.in</p>
+            <p className="mb-0">Beware - There are lot of fake mobile app, websites, whatspp groups; Buy only from trusted agents.</p>
         </div>
     </footer>
   )
