@@ -1,24 +1,30 @@
 {
-  "short_name": "AJOin PWA TWA App",
-  "name": "AJOin PWA TWA React App",
+  "short_name": "Kerala Lottery Result",
+  "name": "Kerala Lottery Result",
   "icons": [
     {
-      "src": "icon_x48.png",
-      "sizes": "48x48",
+      "src": "/images/maskable_logo.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "logo192.png",
+      "src": "/images/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/logo192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "/images/logo512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ],
   "start_url": ".",
