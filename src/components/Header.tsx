@@ -26,7 +26,7 @@ const Header = () => {
             <div className="navbar navbar-lighjt bg-light shadow-sm">
                 <div className="container">
                     <a rel="noreferrer" href="/" className="navbar-brand d-flex align-items-center">
-                        <img src={icon} />
+                        <img src={icon} alt="icon"/>
                         <strong>KERALA LOTTERY RESULT</strong>
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
