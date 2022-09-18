@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <a rel="noreferrer"pp />
+    <App />
   </React.StrictMode>
 );
 
