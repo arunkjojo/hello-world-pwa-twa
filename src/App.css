@@ -1,3 +1,15 @@
+.greeting {
+  justify-content: center;
+  text-align: center;
+
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
