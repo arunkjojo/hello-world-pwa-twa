@@ -1,14 +1,5 @@
-[
-    {
-        "relation": [
-            "delegate_permission/common.handle_all_urls"
-        ],
-        "target" : { 
-            "namespace": "android_app", 
-            "package_name": "com.inluxi.keralalotteryresult",
-            "sha256_cert_fingerprints": [
-                "11:8D:AA:1D:88:34:1C:0F:22:1D:07:B4:B6:61:17:5B:97:73:7C:02:37:9F:27:D6:8A:B8:45:B1:D9:D4:5C:FC"
-            ] 
-    }
-    }
-]
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.inluxi.keralalotteryresult",
+                 "sha256_cert_fingerprints": ["9A:41:BE:40:4D:2D:CF:D4:84:01:8C:DD:D1:A1:45:B3:D6:30:18:DD:83: AE:FB:70:1D:43:E1:1D:C1:7E:90:B0"] }
+  }]
