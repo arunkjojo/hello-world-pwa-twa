@@ -1,42 +1,103 @@
 import React from 'react'
+import { DrawBasicInfo } from '../interfaceTypes'
 import Footer from './Footer'
 import Header from './Header'
 import MainResultCard from './MainResultCard'
 import MainSlider from './MainSlider'
+import Greeting from './Greeting'
 
-const ResultApp = () => {
+import axios from 'axios';
+// import { getDraw } from '../api/getDraw'
+
+const ResultApp: React.FC = () => {
+  const defaultDraw:DrawBasicInfo[]=[{
+    id:'18092022',
+    draw: "BR87",
+    name: "Onam Bumber",
+    drawDate: "18-September-2022",
+    isNewResult: false
+  },
+  {
+    id:'18092022',
+    draw: "BR87",
+    name: "Onam Bumber",
+    drawDate: "18-September-2022",
+    isNewResult: false
+  }];
+
+  const [resultDraw, setResultDraw]: [DrawBasicInfo[], (resultDraw: DrawBasicInfo[]) => void] = React.useState(defaultDraw);
+  const [loading, setLoading]: [boolean, (loading: boolean) => void] = React.useState<boolean>(true);
+  const [error, setError]: [string, (error: string) => void] = React.useState('');
+
+  const getDrawData = () => {
+    axios.get<DrawBasicInfo[]>(
+      'https://api.inluxi.com/get_draw.php?limit=15'
+      ,{
+        params:{
+          limit:15
+        },
+        headers: {
+          "Content-Type": "application/json"
+        },
+      }
+    )
+    .then(response => {
+      // console.log(response.data);
+      setResultDraw(response.data);
+      setLoading(false);
+    })
+    .catch(ex => {
+      const error =
+      ex.response.status === 404
+        ? "Resource Not found"
+        : "An unexpected error has occurred";
+      setError(error);
+      setLoading(false);
+    });
+  }
+
+  React.useEffect(() => {
+    getDrawData();
+  }, [])
+
   return (
     <>
-      <Header />
+      {!loading ? (
+        <>
+          <Header />
 
-      <main>
+          {error==='' ? (
+            <main>
 
-        <MainSlider />
+              <MainSlider />
 
-        <div className="album py-5 bg-light">
-          <div className="container">
+              <div className="album py-5 "> 
+              {/* // bg-light */}
+                <div className="container">
 
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                  <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    {resultDraw?.map((draw: DrawBasicInfo)=>(
+                      <MainResultCard key={draw.id} result={draw}/>
+                    ))}
+                  </div>
 
-              <MainResultCard />
-              <MainResultCard />
-              <MainResultCard />
+                </div>
+              </div>
 
-              <MainResultCard />
-              <MainResultCard />
-              <MainResultCard />
+            </main>
+          ): (
+            <main>
+              <div className="album py-5 container">
+                  <b className='error'>{error}</b>
+              </div>
+            </main>
+          )}
 
-              <MainResultCard />
-              <MainResultCard />
-              <MainResultCard />
-              
-            </div>
-          </div>
-        </div>
-
-      </main>
-
-      <Footer />
+          <Footer />
+        </>
+      ) : (
+        <Greeting />
+      )}
     </>
   )
 }

@@ -17,7 +17,7 @@ function App() {
       {!isLoaded && <Greeting />}
       {
         isLoaded && (
-          <ResultApp />
+          <ResultApp  />
         )
       }
     </div>

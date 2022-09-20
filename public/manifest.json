@@ -3,31 +3,31 @@
   "name": "Kerala Lottery Result",
   "icons": [
     {
-      "src": "/images/maskable_logo.png",
+      "src": "/maskable_logo_512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
-      "src": "/images/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/favicon.ico",
+      "sizes": "64x64",
       "type": "image/x-icon",
       "purpose": "maskable"
     },
     {
-      "src": "/images/logo192.png",
+      "src": "/logo192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
-      "src": "/images/logo512.png",
+      "src": "/logo512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "maskable"
+      "purpose": "any"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
