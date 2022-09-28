@@ -6,7 +6,7 @@ const MainSlider = () => {
         <section className="py-5 text-center slider container">
             <div className="row py-lg-5">
                 <h1 className="fw-light">Kerala Lottery Result</h1>
-                <div className="col-lg-6 col-md-8 mx-auto">
+                <div className="col-lg-6 col-md-8 mx-auto sliderDiv">
                     <Slider />
                 </div>
             </div>

@@ -23,10 +23,9 @@
 }
 
 
-.sliderIcon {
-  font-size: medium;
-  font-family: auto;
-  font-weight: 900;
+.sliderDiv {
+  max-height: 360px !important;
+  overflow: hidden;
 }
 
 
